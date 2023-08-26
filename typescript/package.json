@@ -1,0 +1,10 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "NODE_OPTIONS=--enable-source-maps npx tsc && node"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
