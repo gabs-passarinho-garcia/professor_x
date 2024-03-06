@@ -1,6 +1,7 @@
 import { Io } from "../helpers/io";
 
-const data = Io.input('Digite algo: ');
+await Io.input(async (line) => {
+  console.log('Aqui o que você digitou:', line);
+}, 'Digite algo: ');
 
-console.log(`Você digitou: ${data}`);
 

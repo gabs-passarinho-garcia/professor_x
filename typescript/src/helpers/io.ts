@@ -1,7 +1,12 @@
-import  * as readline from 'readline-sync';
-
 export class Io {
-  public static input(message?: string): string {
-    return readline.question(message);
+  public static async input(callback: (line: string) => Promise<void>, message?: string): Promise<void> {
+    console.log(message);
+    for await (const line of console) {
+      if (line === '') {
+        break;
+      }
+      
+      await callback(line);
+    }
   }
 }
