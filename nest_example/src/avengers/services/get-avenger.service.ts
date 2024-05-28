@@ -9,8 +9,6 @@ export class GetAvengerService {
   public getAvengerByName(data: GetAvengerByNameDto): GetAvengerOutput {
     const { name } = data;
 
-    console.log(avengers);
-
     const avenger = avengers[name];
 
     return {
